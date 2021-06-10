@@ -24,6 +24,105 @@ body, p , ul {
   line-height: 40px;
 }
 
+.background {
+  background-repeat: no-repeat;
+  background-size: contain;
+  &_services,
+  &_storage,
+  &_gpu,
+  &_containers {
+    background-position-x: calc(100% + 90px);
+    background-position-y: calc(100% + 48px);
+    background-size: 196px;
+    &:hover {
+      background-position-y: calc(100% + 28px);
+    }
+  }
+  &_services {
+    background-image: url("../img/servers_outline.svg");
+    &:hover {
+      background-image: url("../img/servers.svg");
+    }
+  }
+  &_storage {
+    background-image: url("../img/storage_outline.svg");
+    &:hover {
+      background-image: url("../img/storage.svg");
+    }
+  }
+  &_gpu {
+    background-image: url("../img/gpu_outline.svg");
+    &:hover {
+      background-image: url("../img/gpu.svg");
+    }
+  }
+  &_containers {
+    background-image: url("../img/containers_outline.svg");
+    &:hover {
+      background-image: url("../img/containers.svg");
+    }
+  }
+  &_bigdata {
+    background-image: url("../img/bigdata_outline.svg");
+    background-position-x: calc(100% + 72px);
+    background-position-y: calc(100% + 42px);
+    background-size: 196px;
+    &:hover {
+      background-image: url("../img/bigdata.svg");
+      background-position-y: calc(100% + 22px);
+    }
+  }
+  &_databases {
+    background-image: url("../img/databases_outline.svg");
+    background-position-x: calc(100% + 78px);
+    background-position-y: calc(100% + 22px);
+    background-size: 196px;
+    &:hover {
+      background-image: url("../img/databases.svg");
+      background-position-y: calc(100% + 2px);
+    }
+  }
+  &_ml {
+    background-image: url("../img/ml_outline.svg");
+    background-position-x: calc(100% + 90px);
+    background-position-y: calc(100% + 48px);
+    background-size: 196px;
+    &:hover {
+      background-image: url("../img/ml.svg");
+      background-position-y: calc(100% + 28px);
+    }
+  }
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 51px;
+  &__item {
+    padding: 13px 30px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out;
+    &:hover {
+      box-shadow: inset 0 2px 4px rgb(0 0 0 / 50%);
+    }
+    &:first-child {
+      margin-right: 10px;
+      border-bottom-left-radius: 16px;
+      background-color: $red;
+    }
+    &:last-child {
+      border-top-right-radius: 16px;
+      background-color: $purple;
+    }
+  }
+}
+
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
