@@ -6,7 +6,7 @@
             titleImgMod: 'services__item-logo_services',
             text: 'IaaS-сервис для создания виртуальных машин без сложных настроек',
             linkVal: 'Попробовать',
-            backImg: 'background_services'
+            backImg: 'services__item_background_services'
         },
         {
             title: 'Объектное<br/> хранилище',
@@ -15,7 +15,7 @@
             text: 'S3-совместимое облачное хранилище для быстрой работы с большими объемами данных',
             textMod: 'services__item-text_storage',
             linkVal: 'Попробовать',
-            backImg: 'background_storage'
+            backImg: 'services__item_background_storage'
         },
         {
             title: 'Графические<br/> адаптеры',
@@ -23,7 +23,7 @@
             titleImgMod: 'services__item-logo_gpu',
             text: 'Мощные облачные вычисления на базе NVIDIA GPU без покупки собственных видеокарт',
             linkVal: 'Попробовать',
-            backImg: 'background_gpu'
+            backImg: 'services__item_background_gpu'
         },
         {
             title: 'Контейнеры<br/> Kubernetes',
@@ -31,7 +31,7 @@
             titleImgMod: 'services__item-logo_containers',
             text: 'IaaS-сервис для создания виртуальных машин без сложных настроек',
             linkVal: 'Попробовать',
-            backImg: 'background_containers'
+            backImg: 'services__item_background_containers'
         },
         {
             title: 'Большие<br/> данные',
@@ -39,7 +39,7 @@
             titleImgMod: 'services__item-logo_bigdata',
             text: 'IaaS-сервис для создания виртуальных машин без сложных настроек',
             linkVal: 'Попробовать',
-            backImg: 'background_bigdata'
+            backImg: 'services__item_background_bigdata'
         },
         {
             title: 'Базы данных<br/> в облаке',
@@ -47,7 +47,7 @@
             titleImgMod: 'services__item-logo_databases',
             text: 'IaaS-сервис для создания виртуальных машин без сложных настроек',
             linkVal: 'Попробовать',
-            backImg: 'background_databases'
+            backImg: 'services__item_background_databases'
         },
         {
             title: 'Машинное<br/> обучение',
@@ -56,7 +56,7 @@
             text: 'IaaS-сервис для создания виртуальных машин без сложных настроек',
             linkVal: 'Скоро запуск',
             linkValClass: 'services__item-link_ml',
-            backImg: 'background_ml'
+            backImg: 'services__item_background_ml'
         },
         {
             title: '',
@@ -74,7 +74,7 @@
         h1.title Наши сервисы
         ul.services__items
             each item in servicesItems
-                li.services__item.background(class= item.backImg)
+                li.services__item.services__item_background(class= item.backImg)
                     .services__item-descr
                         .services__item-header
                             h2.services__item-title !{item.title}

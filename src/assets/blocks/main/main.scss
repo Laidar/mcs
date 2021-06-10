@@ -103,6 +103,75 @@
         background-color: $red;
       }
     }
+    &_background {
+      background-repeat: no-repeat;
+      background-size: contain;
+      &_services,
+      &_storage,
+      &_gpu,
+      &_containers {
+        background-position-x: calc(100% + 90px);
+        background-position-y: calc(100% + 48px);
+        background-size: 196px;
+        &:hover {
+          background-position-y: calc(100% + 28px);
+        }
+      }
+      &_services {
+        background-image: url("../img/servers_outline.svg");
+        &:hover {
+          background-image: url("../img/servers.svg");
+        }
+      }
+      &_storage {
+        background-image: url("../img/storage_outline.svg");
+        &:hover {
+          background-image: url("../img/storage.svg");
+        }
+      }
+      &_gpu {
+        background-image: url("../img/gpu_outline.svg");
+        &:hover {
+          background-image: url("../img/gpu.svg");
+        }
+      }
+      &_containers {
+        background-image: url("../img/containers_outline.svg");
+        &:hover {
+          background-image: url("../img/containers.svg");
+        }
+      }
+      &_bigdata {
+        background-image: url("../img/bigdata_outline.svg");
+        background-position-x: calc(100% + 72px);
+        background-position-y: calc(100% + 42px);
+        background-size: 196px;
+        &:hover {
+          background-image: url("../img/bigdata.svg");
+          background-position-y: calc(100% + 22px);
+        }
+      }
+      &_databases {
+        background-image: url("../img/databases_outline.svg");
+        background-position-x: calc(100% + 78px);
+        background-position-y: calc(100% + 22px);
+        background-size: 196px;
+        &:hover {
+          background-image: url("../img/databases.svg");
+          background-position-y: calc(100% + 2px);
+        }
+      }
+      &_ml {
+        background-image: url("../img/ml_outline.svg");
+        background-position-x: calc(100% + 90px);
+        background-position-y: calc(100% + 48px);
+        background-size: 196px;
+        &:hover {
+          background-image: url("../img/ml.svg");
+          background-position-y: calc(100% + 28px);
+        }
+      }
+    }
   }
 }
 
