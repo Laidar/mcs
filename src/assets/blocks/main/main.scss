@@ -84,6 +84,7 @@
     }
     &-link {
       display: inline-block;
+      width: fit-content;
       margin-top: 57px;
       padding: 9px 0;
       color: #fff;
@@ -95,7 +96,6 @@
         color: $disabled;
       }
       &_mcs {
-        width: fit-content;
         font-weight: 500;
         padding: 9px 20px;
         border-top-right-radius: 16px;
