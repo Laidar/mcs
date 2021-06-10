@@ -1,0 +1,85 @@
+-
+    const servicesItem = [
+        {
+            title: 'Виртуальные<br/> серверы',
+            titleImg: 'assets/img/servers_logo.svg',
+            titleImgMod: 'logo_services',
+            descr: 'IaaS-сервис для создания виртуальных машин без сложных настроек',
+            linkText: 'Попробовать',
+            backImg: 'background_services'
+        },
+        {
+            title: 'Объектное<br/> хранилище',
+            titleImg: 'assets/img/storage_logo.svg',
+            titleImgMod: 'logo_storage',
+            descr: 'S3-совместимое облачное хранилище для быстрой работы с большими объемами данных',
+            descrMod: 'text_storage',
+            linkText: 'Попробовать',
+            backImg: 'background_storage'
+        },
+        {
+            title: 'Графические<br/> адаптеры',
+            titleImg: 'assets/img/gpu_logo.svg',
+            titleImgMod: 'logo_gpu',
+            descr: 'Мощные облачные вычисления на базе NVIDIA GPU без покупки собственных видеокарт',
+            linkText: 'Попробовать',
+            backImg: 'background_gpu'
+        },
+        {
+            title: 'Контейнеры<br/> Kubernetes',
+            titleImg: 'assets/img/containers_logo.svg',
+            titleImgMod: 'logo_containers',
+            descr: 'IaaS-сервис для создания виртуальных машин без сложных настроек',
+            linkText: 'Попробовать',
+            backImg: 'background_containers'
+        },
+        {
+            title: 'Большие<br/> данные',
+            titleImg: 'assets/img/bigdata_logo.svg',
+            titleImgMod: 'logo_bigdata',
+            descr: 'IaaS-сервис для создания виртуальных машин без сложных настроек',
+            linkText: 'Попробовать',
+            backImg: 'background_bigdata'
+        },
+        {
+            title: 'Базы данных<br/> в облаке',
+            titleImg: 'assets/img/databases_logo.svg',
+            titleImgMod: 'logo_databases',
+            descr: 'IaaS-сервис для создания виртуальных машин без сложных настроек',
+            linkText: 'Попробовать',
+            backImg: 'background_databases'
+        },
+        {
+            title: 'Машинное<br/> обучение',
+            titleImg: 'assets/img/ml_logo.svg',
+            titleImgMod: 'logo_ml',
+            descr: 'IaaS-сервис для создания виртуальных машин без сложных настроек',
+            linkText: 'Скоро запуск',
+            linkTextClass: 'link_ml',
+            backImg: 'background_ml'
+        },
+        {
+            title: '',
+            titleImg: 'assets/img/mcs_logo.svg',
+            titleImgMod: 'logo_mcs',
+            descr: 'Скоро на платформе Mail.Ru Cloud Solutions появятся новые сервисы',
+            descrMod: 'text_mcs',
+            linkText: 'Быть в курсе',
+            linkTextClass: 'link_mcs',
+            backImg: ''
+        }
+    ]
+.services
+    .container.services__body
+        h1.title Наши сервисы
+        .services__items
+            each item in servicesItem
+                div.services__item.background(class= item.backImg)
+                    .header
+                        h2.title !{item.title}
+                        img(src= item.titleImg class= item.titleImgMod loading="lazy")
+                    .text(class= item.descrMod)= item.descr
+                    a(href='#' class= item.linkTextClass).link= item.linkText
+        .buttons
+            button.buttons__item Оставить заявку
+            button.buttons__item Узнать стоимость

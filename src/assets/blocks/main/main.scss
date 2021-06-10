@@ -1,0 +1,284 @@
+.services {
+  background-color: $darkBlue;
+  &__body {
+    padding: 60px 15px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100%);
+    grid-gap: 20px;
+    justify-content: center;
+    margin-top: 56px;
+  }
+  &__item {
+    padding: 32px;
+    border: 1px solid #5540CC;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: $purple;
+      .text {
+        color: #fff;
+      }
+    }
+    &:first-child {
+      border-top-right-radius: 16px;
+    }
+    &:last-child {
+      .title {
+        display: none;
+      }
+      border-bottom-left-radius: 16px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .title {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 28px;
+    }
+    .logo {
+      &_services {
+        width: 40px;
+      }
+      &_storage {
+        width: 27px;
+      }
+      &_gpu {
+        width: 26px;
+      }
+      &_containers {
+        width: 39px;
+      }
+      &_bigdata {
+        width: 36px;
+      }
+      &_databases {
+        width: 36px;
+      }
+      &_ml {
+        width: 34px;
+      }
+      &_mcs {
+        width: 134px;
+      }
+    }
+    .text {
+      margin-top: 8px;
+      color: #B0A3FD;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 24px;
+      width: 196px;
+      transition: color 0.3s ease-in-out;
+    }
+    .link {
+      display: inline-block;
+      margin-top: 65px;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 25px;
+      text-decoration: none;
+      &_ml {
+        color: $disabled;
+      }
+      &_mcs {
+        font-weight: 500;
+        padding: 9px 20px;
+        border-top-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+        background-color: $red;
+      }
+    }
+  }
+  .background {
+    background-repeat: no-repeat;
+    background-size: contain;
+    &_services,
+    &_storage,
+    &_gpu,
+    &_containers {
+      background-position-x: calc(100% + 90px);
+      background-position-y: calc(100% + 48px);
+      background-size: 196px;
+      &:hover {
+        background-position-y: calc(100% + 28px);
+      }
+    }
+    &_services {
+      background-image: url("../img/servers_outline.svg");
+      &:hover {
+        background-image: url("../img/servers.svg");
+      }
+    }
+    &_storage {
+      background-image: url("../img/storage_outline.svg");
+      &:hover {
+        background-image: url("../img/storage.svg");
+      }
+    }
+    &_gpu {
+      background-image: url("../img/gpu_outline.svg");
+      &:hover {
+        background-image: url("../img/gpu.svg");
+      }
+    }
+    &_containers {
+      background-image: url("../img/containers_outline.svg");
+      &:hover {
+        background-image: url("../img/containers.svg");
+      }
+    }
+    &_bigdata {
+      background-image: url("../img/bigdata_outline.svg");
+      background-position-x: calc(100% + 72px);
+      background-position-y: calc(100% + 42px);
+      background-size: 196px;
+      &:hover {
+        background-image: url("../img/bigdata.svg");
+        background-position-y: calc(100% + 22px);
+      }
+    }
+    &_databases {
+      background-image: url("../img/databases_outline.svg");
+      background-position-x: calc(100% + 78px);
+      background-position-y: calc(100% + 22px);
+      background-size: 196px;
+      &:hover {
+        background-image: url("../img/databases.svg");
+        background-position-y: calc(100% + 2px);
+      }
+    }
+    &_ml {
+      background-image: url("../img/ml_outline.svg");
+      background-position-x: calc(100% + 90px);
+      background-position-y: calc(100% + 48px);
+      background-size: 196px;
+      &:hover {
+        background-image: url("../img/ml.svg");
+        background-position-y: calc(100% + 28px);
+      }
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 51px;
+    &__item {
+      padding: 13px 30px;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: center;
+      color: #fff;
+      border: 1px solid transparent;
+      box-sizing: border-box;
+      cursor: pointer;
+      &:first-child {
+        margin-right: 10px;
+        border-bottom-left-radius: 16px;
+        background-color: $red;
+      }
+      &:last-child {
+        border-top-right-radius: 16px;
+        background-color: $purple;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .services {
+    &__body {
+      padding: 60px 35px;
+    }
+    &__items {
+      grid-template-columns: repeat(auto-fill, 339px);
+      & > .services__item {border-radius: 0}
+    }
+    &__item {
+      .text {
+        &_storage {
+          width: 255px;
+        }
+      }
+      &:nth-child(2) {
+        border-top-right-radius: 16px;
+      }
+      &:nth-child(2n+1):nth-last-child(-n+2) {
+        border-bottom-left-radius: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .services {
+    &__body {
+      padding: 60px 50px;
+    }
+    &__items {
+      grid-template-columns: repeat(auto-fill, 281px);
+      grid-gap: 40px;
+    }
+    &__item {
+      .text {
+        &_storage,
+        &_mcs {
+          width: 212px;
+        }
+      }
+      &:nth-child(odd),
+      &:nth-child(even),
+      &:nth-child(2n+1):nth-last-child(-n+2) {
+        border-radius: 0;
+      }
+      &:nth-child(3) {
+        border-top-right-radius: 16px;
+      }
+      &:nth-child(3n+1):nth-last-child(-n+3) {
+        border-bottom-left-radius: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1366px) {
+  .services {
+    &__body {
+      padding: 60px 133px;
+    }
+    &__items {
+      grid-template-columns: repeat(auto-fill, 260px);
+      grid-gap: 20px;
+    }
+    &__item {
+      .text {
+        &_storage,
+        &_mcs {
+          width: 196px;
+        }
+      }
+      &:nth-child(odd),
+      &:nth-child(even),
+      &:nth-child(2n+1):nth-last-child(-n+2),
+      &:nth-child(3n+1):nth-last-child(-n+3) {
+        border-radius: 0;
+      }
+
+      &:nth-child(4) {
+        border-top-right-radius: 16px;
+      }
+      &:nth-child(4n+1):nth-last-child(-n+4) {
+        border-bottom-left-radius: 16px;
+      }
+    }
+  }
+}
